@@ -4,7 +4,7 @@ namespace App\Http\Controllers\backend;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\SocialLink;
+use App\Sociallink;
 use Validator;
 
 class SocialLinkController extends Controller
@@ -16,7 +16,7 @@ class SocialLinkController extends Controller
      */
     public function index()
     {
-        $socials = SocialLink::all();
+        $socials = Sociallink::all();
 
         return view('admin.sociallink.index',compact('socials'));
     }
@@ -81,7 +81,7 @@ class SocialLinkController extends Controller
      */
     public function edit($id)
     {
-        $social = SocialLink::find($id);
+        $social = Sociallink::find($id);
 
         return view('admin.sociallink.edit',compact('social'));
     }
@@ -107,7 +107,7 @@ class SocialLinkController extends Controller
             return back()->withInputs()->withError($validator);
         }
         else{
-            $social = SocialLink::find($id);
+            $social = Sociallink::find($id);
             $social->title = $request->title;
             $social->class = $request->class;
             $social->icon = $request->icon;
@@ -126,7 +126,7 @@ class SocialLinkController extends Controller
      */
     public function destroy($id)
     {
-        $social = SocialLink::find($id);
+        $social = Sociallink::find($id);
 
         if($social)
         {
