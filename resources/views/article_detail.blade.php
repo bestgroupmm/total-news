@@ -2,6 +2,16 @@
 
 @section('css')
 <title>{{$article->title_en}}</title>
+
+<!-- You can use Open Graph tags to customize link previews.
+    Learn more: https://developers.facebook.com/docs/sharing/webmasters -->
+  <meta property="og:url"           content="{{url('')}}/articles/{{$category->slug}}/{{$article->slug}}" />
+  <meta property="og:type"          content="website" />
+  <meta property="og:title"         content="Myanmar Total News" />
+  <meta property="og:description"   content="Myanmar Total News Homepage" />
+  <meta property="og:image"         content="" />
+  <link rel="canonical" href="http://mmtotalnews.com">
+  <meta property="op:markup_version" content="v1.0">
 @endsection
 
 
@@ -10,7 +20,6 @@
 <div class="container">
 @include('partials.header')
 
-@include('partials.ads')
 </div>
 
 @endsection
@@ -39,7 +48,10 @@
               <img class="card-img flex-auto d-none d-md-block" src="{{asset('')}}/{{$article->img_path}}/{{$article->img_name}}" alt="{{$article->title}}">
               <br/>
               <p>
-                <div class="fb-share-button" data-href="{{url('/articles')}}/{{$category->slug}}/{{$article->slug}}" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+                <div class="fb-share-button" 
+                  data-href="{{url('/articles')}}/{{$category->slug}}/{{$article->slug}}" 
+                  data-layout="button_count">
+                </div>
               </p>
               <p class="card-text mb-auto">{!! $article->desc !!} </p>
               @if($article->video_link)
