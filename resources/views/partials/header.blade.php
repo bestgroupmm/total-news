@@ -5,7 +5,7 @@
         <a class="text-muted" href="#">Subscribe</a>
       </div> -->
       <div class="col text-center">
-        <a class="blog-header-logo text-dark" href="{{url('/')}}">Myanmar Total News</a>
+        <a class="blog-header-logo text-dark" href="{{url('/')}}"></a>
       </div>
       
     </div>
@@ -36,49 +36,24 @@
   </div>
 
 <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-      <div class="container">
-        <a class="navbar-brand" href="{{url('/')}}">Myanmar Total News</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="{{url('/')}}">Myanmar Total News</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
 
-            <?php  
-              $categories = \App\ArticleCategory::all();
-            ?>
-            @foreach($categories as $category)
-            <li class="nav-item">
-              <a class="nav-link text-white" href="{{url('')}}/articles/{{$category->slug}}">{{$category->title}}</a>
-            </li>
-            @endforeach
-          </ul>
-        </div>
-      </div>
-    </nav>
-
-<nav class="navbar navbar-expand-sm" style="padding-left: 0;margin:0;display: none;">
-
-  <!-- Links -->
-  <div class="collapse navbar-collapse" id="nav-content">   
-    <ul class="navbar-nav">
-      <li class="nav-item p-2">
-        <a class="nav-link text-muted" href="#">World</a>
-      </li>
-      <li class="nav-item p-2">
-        <a class="nav-link text-muted" href="#">Link 2</a>
-      </li>
-      <li class="nav-item p-2 dropdown">
-        <a class="nav-link text-muted dropdown-toggle" data-toggle="dropdown" id="Preview" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-      Dropdown
-        </a>
-        <div class="dropdown-menu" aria-labelledby="Preview">
-          <a class="dropdown-item" href="#">Dropdown Link 1</a>
-          <a class="dropdown-item" href="#">Dropdown Link 2</a>
-          <a class="dropdown-item" href="#">Dropdown Link 3</a>
-        </div>
-      </li>
-    </ul>
+        <?php  
+          $categories = \App\ArticleCategory::all();
+        ?>
+        @foreach($categories as $category)
+        <li class="nav-item">
+          <a class="nav-link text-white" href="{{url('')}}/articles/{{$category->slug}}">{{$category->title}}</a>
+        </li>
+        @endforeach
+      </ul>
+    </div>
   </div>
 </nav>

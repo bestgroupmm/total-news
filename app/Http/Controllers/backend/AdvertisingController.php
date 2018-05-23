@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Advertising;
 use Validator;
 use Session;
+use File;
 
 class AdvertisingController extends Controller
 {
@@ -156,7 +157,7 @@ class AdvertisingController extends Controller
                 $img_del = $ads->image;
                 if(is_file($ads->image))
                 {
-                    $img_del->delete();
+                    File::delete($img_del);
                 }
 
                 $image = $request->file('image');
