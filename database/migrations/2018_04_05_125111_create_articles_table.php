@@ -18,6 +18,7 @@ class CreateArticlesTable extends Migration
             $table->string('title');
             $table->string('title_en');
             $table->string('slug');
+            $table->string('video_link');
             $table->text('desc');
             $table->string('img_path');
             $table->string('img_name');

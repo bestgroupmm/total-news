@@ -45,6 +45,7 @@ class ArticleController extends Controller
         $validator = Validator::make($request->all(),[
                 'title' => 'required|max:255',
                 'title_en' => 'required|max:255',
+                'video_link' => 'max:255',
                 'category' => 'required|numeric',
                 'desc' => 'required',
                 'avatar' => 'required|mimes:jpg,jpeg,png'
@@ -69,6 +70,7 @@ class ArticleController extends Controller
             $article = new Article;
             $article->title = $request->title;
             $article->title_en = $request->title_en;
+            $article->video_link = $request->video_link;
             $article->slug = str_replace(' ','-', $request->title);
             $article->img_path = $img_path;
             $article->img_name = $img_name;
@@ -120,6 +122,7 @@ class ArticleController extends Controller
         $validator = Validator::make($request->all(),[
                 'title' => 'required|max:255',
                 'title_en' => 'required|max:255',
+                'video_link' => 'max:255',
                 'category' => 'required|numeric',
                 'desc' => 'required',
                 'avatar' => 'mimes:jpg,jpeg,png'
@@ -153,6 +156,7 @@ class ArticleController extends Controller
             
             $article->title = $request->title;
             $article->title_en = $request->title_en;
+            $article->video_link = $request->video_link;
             $article->desc = $request->desc;
             $article->category_id = $request->category;
             $article->view = 0;

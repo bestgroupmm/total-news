@@ -67,6 +67,20 @@
                   </div>
                </div>
 
+               <div class="form-group{{ $errors->has('video_link') ? ' has-error' : '' }}">
+                  <label for="video_link" class="col-md-2 control-label unicode">Video</label>
+
+                  <div class="col-md-6">
+                     <input id="video_link" type="text" class="form-control" name="video_link" value="{{ old('video_link') }}" required>
+
+                    @if ($errors->has('video_link'))
+                        <span class="help-block">
+                            <strong>{{ $errors->first('video_link') }}</strong>
+                        </span>
+                    @endif
+                  </div>
+               </div>
+
                <div class="form-group{{ $errors->has('keyword') ? ' has-error' : '' }}">
                   <label for="keyword" class="col-md-2 control-label unicode">Category</label>
 
