@@ -17,7 +17,7 @@
 
 		  	@foreach($adves as $ads)
 		  	<div class="carousel-item <?php print ($x == 1) ? 'active' : ''; ?>">
-		      <img class="d-block img-fluid" src="{{asset('')}}/{{$ads->image}}" alt="{{$ads->company}}">
+		      	<a href="{{$ads->link}}" title="{{$ads->company}}"><img class="d-block img-fluid" src="{{asset('')}}/{{$ads->image}}" alt="{{$ads->company}}"></a>
 		    </div>
 		    <?php $x ++; ?>
 		  	@endforeach
