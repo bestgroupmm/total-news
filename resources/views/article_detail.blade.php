@@ -41,7 +41,7 @@
               <p>
                 <div class="fb-share-button" data-href="{{url('/articles')}}/{{$category->slug}}/{{$article->slug}}" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
               </p>
-              <p class="card-text mb-auto">{!!$article->desc!!} </p>
+              <p class="card-text mb-auto">{!! $article->desc !!} </p>
               @if($article->video_link)
                <p>
                 <iframe width="500" height="300" src="{{$article->video_link}}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>

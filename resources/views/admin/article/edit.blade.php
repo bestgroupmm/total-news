@@ -73,7 +73,7 @@
                   <label for="video_link" class="col-md-2 control-label unicode">Video</label>
 
                   <div class="col-md-6">
-                     <input id="video_link" type="text" class="form-control" name="video_link" value="{{$article->video_link}}" required>
+                     <input id="video_link" type="text" class="form-control" name="video_link" value="{{$article->video_link}}" >
 
                     @if ($errors->has('video_link'))
                         <span class="help-block">
