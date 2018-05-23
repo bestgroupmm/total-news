@@ -3,6 +3,7 @@
 	  <p class="lead mb-0"><a href="#" class="text-white font-weight-bold">Do you want to ads here please contact me 1110 px x 130px</a></p>
 	</div>
 </div> -->
+<br/><br/>
 
 <?php  
 	$adves = \App\Advertising::where('expire','=','0')->get();
