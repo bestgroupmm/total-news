@@ -44,7 +44,7 @@
               <p class="card-text mb-auto">{!!$article->desc!!} </p>
               @if($article->video_link)
                <p>
-                <iframe width="500" height="300" src="{{$article->video_url}}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <iframe width="500" height="300" src="{{$article->video_link}}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
               </p>
               @endif
               <br/><br/>
