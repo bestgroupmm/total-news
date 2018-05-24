@@ -9,7 +9,7 @@
   <meta property="og:type"          content="website" />
   <meta property="og:title"         content="Myanmar Total News" />
   <meta property="og:description"   content="Myanmar Total News Homepage" />
-  <meta property="og:image"         content="" />
+  <meta property="og:image"         content="{{asset('')}}/{{$article->img_path}}/{{$article->img_name}}" />
   <link rel="canonical" href="http://mmtotalnews.com">
   <meta property="op:markup_version" content="v1.0">
 @endsection
@@ -19,6 +19,7 @@
 
 <div class="container">
 @include('partials.header')
+@include('partials.ads')
 
 </div>
 
