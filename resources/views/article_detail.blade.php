@@ -45,7 +45,7 @@
               <div class="mb-1 text-muted">
                 <small>{{date('F d, Y',strtotime($article->created_at))}} ({{$ago}})</small>   <span class="badge badge-pill badge-success"> view {{$article->view}}</span>
               </div>
-              <img class="card-img flex-auto d-none" src="{{asset('')}}/{{$article->img_path}}/{{$article->img_name}}" alt="{{$article->title}}">
+              <img class="card-img flex-auto" src="{{asset('')}}/{{$article->img_path}}/{{$article->img_name}}" alt="{{$article->title}}">
               <br/>
               <p>
                 <div class="fb-share-button" 
