@@ -8,7 +8,7 @@
   <meta property="og:url"           content="{{url('')}}/articles/{{$category->slug}}/{{$article->slug}}" />
   <meta property="og:type"          content="website" />
   <meta property="og:title"         content="{{$category->title}}" />
-  <meta property="og:description"   content="{!! $article->desc !!}" />
+  <meta property="og:description"   content="Myanmar Total News Homepage" />
   <meta property="og:image"         content="{{asset('')}}/{{$article->img_path}}/{{$article->img_name}}" />
   <link rel="canonical" href="http://mmtotalnews.com">
   <meta property="op:markup_version" content="v1.0">
